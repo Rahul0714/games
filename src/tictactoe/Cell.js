@@ -23,7 +23,7 @@ const Cell = ({
 
         return;
       }
-      cell.includes("") && setWinningMessage("Draw ");
+      !cell.includes("") && setWinningMessage("Draw ");
     });
   };
 
