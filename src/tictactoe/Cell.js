@@ -23,7 +23,7 @@ const Cell = ({
 
         return;
       }
-      !cell.includes("") && setWinningMessage("Draw ");
+      cell.includes("") && setWinningMessage("Draw ");
     });
   };
 
@@ -59,7 +59,7 @@ const Cell = ({
   return (
     <div
       id={id}
-      className={`w-[65px] sm:w-1/3 h-28 border border-black   text-center cursor-pointer flex justify-center items-center text-5xl`}
+      className={`w-1/3 h-28 border border-black   text-center cursor-pointer flex justify-center items-center text-5xl`}
       onClick={!winningMessage ? handleClick : undefined}
     >
       {cell[id] === "circle" ? "O" : cell[id] === "cross" ? "X" : ""}
